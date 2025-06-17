@@ -1,7 +1,6 @@
-
 import { useState } from "react";
-import { Mail, Send, MapPin } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Send } from "lucide-react";
+import emailjs from "emailjs-com"; 
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ export const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -24,15 +22,26 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulation d'envoi (remplacez par votre logique d'envoi réelle)
-    setTimeout(() => {
-      toast({
-        title: "Message envoyé !",
-        description: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
-      });
+    try {
+      // Envoi du mail via EmailJS
+      const result = await emailjs.send(
+        "service_rev869s",      
+        "template_skdudkg",     
+        formData,               
+        "dSPi2ezdP1CG5Q__M"          
+      );
+
+      // Afficher un message de succès (par exemple, via un toast ou alert)
+      alert("Message envoyé avec succès !");
+      
+      // Réinitialisation du formulaire
       setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      // Gérer les erreurs d'envoi
+      alert("Erreur lors de l'envoi du message.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -40,12 +49,9 @@ export const Contact = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Contact Form */}
           <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Envoyez-moi un message</h3>
             
@@ -134,9 +140,9 @@ export const Contact = () => {
                 )}
               </button>
             </form>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
     </section>
   );
 };

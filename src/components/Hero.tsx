@@ -47,7 +47,7 @@ export const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
             <a
-              href="mailto:votre@email.com"
+              href="mailto:TheoBUTInf@outlook.com "
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-gray-300 hover:text-cyan-400 border border-white/20"
             >
               <Mail size={24} />

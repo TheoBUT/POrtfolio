@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Mail, Heart } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,8 +14,7 @@ export const Footer = () => {
               Portfolio
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Étudiant passionné par le développement web, toujours à la recherche de nouveaux défis 
-              et d'opportunités d'apprentissage.
+              Étudiant en BUT Informatique - Cybersécurité, Systèmes & Réseaux, passionné par la cybersécurité.
             </p>
           </div>
 
@@ -46,7 +45,7 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Mail</h4>
             <div className="flex space-x-4">
               <a
-                href="mailto:votre@email.com"
+                href="mailto:TheoBUTInf@outlook.com "
                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200"
               >
                 <Mail size={20} />

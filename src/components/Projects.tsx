@@ -15,8 +15,9 @@ export const Projects = () => {
 
 Compétences acquises : Architecture SIEM, analyse de logs, détection d'intrusion, gestion des incidents
 Savoir-être : Rigueur dans la configuration, documentation technique, travail en équipe SOC`,
-      technologies: ["Wazuh", "Elasticsearch", "Linux", "Regex", "Kibana", "SIEM"],
-      image: "/public/images/Wazuh.png"
+      technologies: ["Wazuh", "Elasticsearch", "Linux", "Regex", "SIEM"],
+      image: "/public/images/Wazuh.png",
+      marginTop: "80px" // marge en pixels pour l'image
     },
     {
       id: 2,
@@ -36,7 +37,8 @@ Savoir-être : Rigueur dans la configuration, documentation technique, travail e
 Compétences acquises : Virtualisation, sauvegarde/restauration, sécurité AD, déploiement EDR
 Savoir-être : Gestion de projet, planification des maintenances, documentation détaillée`,
       technologies: ["Hyper-V", "Active Directory", "Sentinel One", "Veeam", "PowerShell", "RAID", "iLO/iDRAC"],
-      image: "/public/images/sentinelone-logo.jpg"
+      image: "/public/images/sentinelone-logo.jpg",
+      marginTop: "170px"
     },
     {
       id: 3,
@@ -53,8 +55,9 @@ Savoir-être : Gestion de projet, planification des maintenances, documentation 
 
 Compétences acquises : Social engineering, analyse comportementale, sensibilisation sécurité
 Savoir-être : Communication pédagogique, éthique professionnelle, présentation de résultats`,
-      technologies: ["Gophish", "Social Engineering", "Email Security", "Reporting"],
-      image: "/images/project-phishing.jpg"
+      technologies: ["Gophish", "Social Engineering", "Sensibilisation", "Formation"],
+      image: "/public/images/gophish.png",
+      marginTop: "100px"
     },
     {
       id: 4,
@@ -71,8 +74,9 @@ Savoir-être : Communication pédagogique, éthique professionnelle, présentati
 
 Compétences acquises : Technologies SDWAN, architecture réseau, gestion de projet réseau
 Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
-      technologies: ["SDWAN", "Cisco", "Routing", "Network Security", "VPN"],
-      image: "/images/project-sdwan.jpg"
+      technologies: ["SDWAN", "Fortinet", "Cisco Meraki", "Routing", "Network Security", "VPN"],
+      image: "/public/images/SDWAN.png",
+      marginTop: "100px"
     }
   ];
 
@@ -97,12 +101,15 @@ Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
               <div className={`lg:flex ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 {/* Image */}
                 <div className="lg:w-1/2">
-                  <div className="h-64 lg:h-[400px] flex items-center justify-center mt-20 ">
+                  <div
+                    className="h-64 lg:h-[400px] flex items-center justify-center"
+                    style={{ marginTop: mission.marginTop || 0 }}
+                  >
                     <img
-                        src={mission.image}
-                        alt={mission.title}
-                        className="max-h-full max-w-full object-contain"
-                      />
+                      src={mission.image}
+                      alt={mission.title}
+                      className="max-h-full max-w-full object-contain"
+                    />
                   </div>
                 </div>
 
