@@ -41,7 +41,6 @@ export const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Intéressé par mon profil en cybersécurité ? N'hésitez pas à me contacter pour discuter d'opportunités
           </p>
         </div>
 
@@ -135,22 +134,9 @@ export const Contact = () => {
                 )}
               </button>
             </form>
-
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <div className="flex items-center justify-center space-x-6">
-                <div className="flex items-center text-gray-600">
-                  <Mail className="mr-2" size={20} />
-                  <span>votre.email@exemple.com</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <MapPin className="mr-2" size={20} />
-                  <span>Votre Ville, France</span>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };

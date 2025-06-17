@@ -43,24 +43,8 @@ export const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Suivez-moi</h4>
+            <h4 className="text-lg font-semibold mb-4">Mail</h4>
             <div className="flex space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200"
-              >
-                <Linkedin size={20} />
-              </a>
               <a
                 href="mailto:votre@email.com"
                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200"
@@ -69,14 +53,6 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 flex items-center justify-center">
-            © {currentYear} Portfolio. Créé avec{" "}
-            <Heart className="text-red-500 mx-1" size={16} />{" "}
-            et Lovable
-          </p>
         </div>
       </div>
     </footer>

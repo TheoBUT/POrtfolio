@@ -1,5 +1,5 @@
 
-import { ArrowDown, Github, Linkedin, Mail, Shield, Server, Network } from "lucide-react";
+import { ArrowDown, Mail, Shield, Server, Network } from "lucide-react";
 
 export const Hero = () => {
   const scrollToAbout = () => {
@@ -32,13 +32,13 @@ export const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Votre{" "}
+            Théo{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Nom
+              VINCENT
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
-            Étudiant en BUT Informatique - Cybersécurité & Systèmes
+            Étudiant en BUT Informatique - Cybersécurité, Systèmes & Réseaux
           </p>
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
             Spécialisé en déploiement d'applications sécurisées, SIEM, EDR et infrastructure réseau
@@ -46,22 +46,6 @@ export const Hero = () => {
           
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-gray-300 hover:text-cyan-400 border border-white/20"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-gray-300 hover:text-cyan-400 border border-white/20"
-            >
-              <Linkedin size={24} />
-            </a>
             <a
               href="mailto:votre@email.com"
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-gray-300 hover:text-cyan-400 border border-white/20"

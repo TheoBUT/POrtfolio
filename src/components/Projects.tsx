@@ -1,13 +1,12 @@
-
-import { ExternalLink, Github, Calendar, Shield, Server, Network, Database, Users } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 export const Projects = () => {
   const missions = [
     {
       id: 1,
       title: "Mise en place d'un SIEM (Wazuh)",
-      description: "Déploiement complet d'une solution SIEM avec architecture distribuée pour la détection et l'analyse des menaces.",
-      longDescription: `Mission complète de mise en œuvre d'un SIEM Wazuh dans un environnement professionnel :
+      description: "Déploiement complet d'une solution SIEM pour la détection et l'analyse des menaces.",
+      longDescription: `Projet de mise en œuvre d'un SIEM Wazuh dans un environnement professionnel :
 
 • Installation et configuration de 2 serveurs : serveur indexer/dashboard et serveur manager
 • Réalisation et implémentation de règles personnalisées et décodeurs pour la détection d'incidents
@@ -16,14 +15,8 @@ export const Projects = () => {
 
 Compétences acquises : Architecture SIEM, analyse de logs, détection d'intrusion, gestion des incidents
 Savoir-être : Rigueur dans la configuration, documentation technique, travail en équipe SOC`,
-      technologies: ["Wazuh", "Elasticsearch", "Linux", "Docker", "JSON"],
-      image: "/placeholder.svg",
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
-      duration: "2 mois",
-      team: "Équipe SOC",
-      icon: Database
+      technologies: ["Wazuh", "Elasticsearch", "Linux", "Regex", "Kibana", "SIEM"],
+      image: "/public/images/Wazuh.png"
     },
     {
       id: 2,
@@ -43,13 +36,7 @@ Savoir-être : Rigueur dans la configuration, documentation technique, travail e
 Compétences acquises : Virtualisation, sauvegarde/restauration, sécurité AD, déploiement EDR
 Savoir-être : Gestion de projet, planification des maintenances, documentation détaillée`,
       technologies: ["Hyper-V", "Active Directory", "Sentinel One", "Veeam", "PowerShell", "RAID", "iLO/iDRAC"],
-      image: "/placeholder.svg",
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
-      duration: "3 mois",
-      team: "Équipe Infrastructure",
-      icon: Server
+      image: "/public/images/sentinelone-logo.jpg"
     },
     {
       id: 3,
@@ -67,13 +54,7 @@ Savoir-être : Gestion de projet, planification des maintenances, documentation 
 Compétences acquises : Social engineering, analyse comportementale, sensibilisation sécurité
 Savoir-être : Communication pédagogique, éthique professionnelle, présentation de résultats`,
       technologies: ["Gophish", "Social Engineering", "Email Security", "Reporting"],
-      image: "/placeholder.svg",
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
-      duration: "1 mois",
-      team: "Équipe Sécurité",
-      icon: Shield
+      image: "/images/project-phishing.jpg"
     },
     {
       id: 4,
@@ -91,13 +72,7 @@ Savoir-être : Communication pédagogique, éthique professionnelle, présentati
 Compétences acquises : Technologies SDWAN, architecture réseau, gestion de projet réseau
 Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
       technologies: ["SDWAN", "Cisco", "Routing", "Network Security", "VPN"],
-      image: "/placeholder.svg",
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "2024",
-      duration: "6 mois",
-      team: "Équipe Réseau",
-      icon: Network
+      image: "/images/project-sdwan.jpg"
     }
   ];
 
@@ -105,7 +80,7 @@ Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
     <section id="projets" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Mes Missions</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Mes Projets</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Découvrez mes principales missions en cybersécurité, systèmes et réseaux
           </p>
@@ -120,25 +95,19 @@ Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
               }`}
             >
               <div className={`lg:flex ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                {/* Icon/Image */}
+                {/* Image */}
                 <div className="lg:w-1/2">
-                  <div className="h-64 lg:h-full bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
-                    <mission.icon size={64} className="text-white opacity-80" />
+                  <div className="h-64 lg:h-[400px] flex items-center justify-center mt-20 ">
+                    <img
+                        src={mission.image}
+                        alt={mission.title}
+                        className="max-h-full max-w-full object-contain"
+                      />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="lg:w-1/2 p-8 text-white">
-                  <div className="flex items-center mb-4 text-cyan-400">
-                    <Calendar size={20} className="mr-2" />
-                    <span className="font-medium">{mission.date}</span>
-                    <span className="mx-2 text-gray-500">•</span>
-                    <span className="text-gray-300">{mission.duration}</span>
-                    <span className="mx-2 text-gray-500">•</span>
-                    <Users size={16} className="mr-1" />
-                    <span className="text-gray-300">{mission.team}</span>
-                  </div>
-
                   <h3 className="text-2xl font-bold text-white mb-4">{mission.title}</h3>
                   <p className="text-gray-300 mb-6">{mission.description}</p>
 
