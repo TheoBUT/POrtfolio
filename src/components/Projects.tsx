@@ -1,145 +1,168 @@
 
-import { ExternalLink, Github, Calendar, Code, Users } from "lucide-react";
+import { ExternalLink, Github, Calendar, Shield, Server, Network, Database, Users } from "lucide-react";
 
 export const Projects = () => {
-  const projects = [
+  const missions = [
     {
       id: 1,
-      title: "Application de Gestion de Tâches",
-      description: "Application web complète permettant de gérer des projets et des tâches en équipe avec authentification et temps réel.",
-      longDescription: `Ce projet m'a permis de développer mes compétences en développement full-stack. J'ai implémenté un système d'authentification sécurisé, une base de données relationnelle optimisée, et une interface utilisateur intuitive. 
-      
-      Compétences acquises : Architecture logicielle, gestion d'état complexe, optimisation des performances, tests unitaires.
-      
-      Savoir-être mis en œuvre : Travail en autonomie, résolution de problèmes complexes, attention au détail, respect des délais.`,
-      technologies: ["React", "Node.js", "PostgreSQL", "Socket.io", "JWT"],
+      title: "Mise en place d'un SIEM (Wazuh)",
+      description: "Déploiement complet d'une solution SIEM avec architecture distribuée pour la détection et l'analyse des menaces.",
+      longDescription: `Mission complète de mise en œuvre d'un SIEM Wazuh dans un environnement professionnel :
+
+• Installation et configuration de 2 serveurs : serveur indexer/dashboard et serveur manager
+• Réalisation et implémentation de règles personnalisées et décodeurs pour la détection d'incidents
+• Déploiement massif des agents Wazuh sur l'infrastructure
+• Configuration des alertes et tableaux de bord pour le monitoring sécuritaire
+
+Compétences acquises : Architecture SIEM, analyse de logs, détection d'intrusion, gestion des incidents
+Savoir-être : Rigueur dans la configuration, documentation technique, travail en équipe SOC`,
+      technologies: ["Wazuh", "Elasticsearch", "Linux", "Docker", "JSON"],
       image: "/placeholder.svg",
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      date: "Mars 2024",
-      duration: "3 mois",
-      team: "Solo"
+      githubUrl: "#",
+      liveUrl: "#",
+      date: "2024",
+      duration: "2 mois",
+      team: "Équipe SOC",
+      icon: Database
     },
     {
       id: 2,
-      title: "E-commerce Responsive",
-      description: "Site e-commerce complet avec panier, paiement en ligne et administration. Design moderne et entièrement responsive.",
-      longDescription: `Projet de création d'une boutique en ligne complète incluant la gestion des produits, des commandes et des utilisateurs. J'ai mis l'accent sur l'expérience utilisateur et la sécurité des transactions.
-      
-      Compétences acquises : Intégration d'APIs de paiement, optimisation SEO, gestion des médias, sécurisation des données.
-      
-      Savoir-être mis en œuvre : Sens du service client, adaptabilité, communication avec les parties prenantes.`,
-      technologies: ["Vue.js", "Express", "Stripe", "MongoDB", "AWS"],
+      title: "Sécurisation complète d'infrastructure réseau",
+      description: "Projet de sécurisation globale incluant hyperviseurs, Active Directory, EDR et sauvegarde avec restauration complète.",
+      longDescription: `Projet majeur de sécurisation d'infrastructure critique :
+
+• Sécurisation de serveurs Active Directory avec audit PingCastle
+• Réinstallation complète de 3 hyperviseurs (2 HP avec ILO, 1 DELL avec iDRAC)
+• Configuration RAID 1 pour système et RAID 6 pour données
+• Mise en place de la réplication Hyper-V entre hyperviseurs
+• Restauration des VM avec Veeam Backup & Replication
+• Déploiement EDR Sentinel One via GPO avec scripts PowerShell
+• Création de scripts de force de changement de mots de passe
+• Installation d'un nouveau NAS pour sauvegarde des serveurs restaurés
+
+Compétences acquises : Virtualisation, sauvegarde/restauration, sécurité AD, déploiement EDR
+Savoir-être : Gestion de projet, planification des maintenances, documentation détaillée`,
+      technologies: ["Hyper-V", "Active Directory", "Sentinel One", "Veeam", "PowerShell", "RAID", "iLO/iDRAC"],
       image: "/placeholder.svg",
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      date: "Janvier 2024",
-      duration: "4 mois",
-      team: "3 personnes"
+      githubUrl: "#",
+      liveUrl: "#",
+      date: "2024",
+      duration: "3 mois",
+      team: "Équipe Infrastructure",
+      icon: Server
     },
     {
       id: 3,
-      title: "Dashboard Analytics",
-      description: "Interface d'administration avec graphiques interactifs et visualisation de données en temps réel.",
-      longDescription: `Développement d'un tableau de bord administrateur permettant la visualisation et l'analyse de données complexes. Le projet comprenait des graphiques interactifs, des filtres avancés et des exports de données.
-      
-      Compétences acquises : Visualisation de données, optimisation des requêtes, design UX/UI, responsive design.
-      
-      Savoir-être mis en œuvre : Esprit analytique, collaboration en équipe, présentation de résultats.`,
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Redis"],
+      title: "Campagne de phishing avec Gophish",
+      description: "Organisation et réalisation d'une campagne de sensibilisation à la sécurité par tests de phishing sur les collaborateurs.",
+      longDescription: `Campagne de sensibilisation à la cybersécurité :
+
+• Configuration et déploiement de la plateforme Gophish
+• Création de templates d'emails de phishing réalistes
+• Ciblage et segmentation des collaborateurs
+• Analyse des résultats et taux de réussite
+• Élaboration de recommandations de sensibilisation
+• Rapport détaillé avec métriques et plan d'amélioration
+
+Compétences acquises : Social engineering, analyse comportementale, sensibilisation sécurité
+Savoir-être : Communication pédagogique, éthique professionnelle, présentation de résultats`,
+      technologies: ["Gophish", "Social Engineering", "Email Security", "Reporting"],
       image: "/placeholder.svg",
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      date: "Novembre 2023",
-      duration: "2 mois",
-      team: "2 personnes"
+      githubUrl: "#",
+      liveUrl: "#",
+      date: "2024",
+      duration: "1 mois",
+      team: "Équipe Sécurité",
+      icon: Shield
+    },
+    {
+      id: 4,
+      title: "Participation au projet SDWAN",
+      description: "Contribution à la mise à jour de l'infrastructure réseau dans le cadre d'un projet de modernisation SDWAN.",
+      longDescription: `Participation active au projet de modernisation réseau :
+
+• Analyse de l'infrastructure réseau existante
+• Participation à la planification de la migration SDWAN
+• Configuration et tests des équipements réseau
+• Documentation des procédures de migration
+• Support technique durant la phase de déploiement
+• Validation des performances post-migration
+
+Compétences acquises : Technologies SDWAN, architecture réseau, gestion de projet réseau
+Savoir-être : Travail en équipe projet, adaptabilité, esprit d'analyse`,
+      technologies: ["SDWAN", "Cisco", "Routing", "Network Security", "VPN"],
+      image: "/placeholder.svg",
+      githubUrl: "#",
+      liveUrl: "#",
+      date: "2024",
+      duration: "6 mois",
+      team: "Équipe Réseau",
+      icon: Network
     }
   ];
 
   return (
-    <section id="projets" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="projets" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Mes Projets</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez mes réalisations principales qui mettent en évidence mes compétences et mon évolution
+          <h2 className="text-4xl font-bold text-white mb-4">Mes Missions</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Découvrez mes principales missions en cybersécurité, systèmes et réseaux
           </p>
         </div>
 
         <div className="space-y-12">
-          {projects.map((project, index) => (
+          {missions.map((mission, index) => (
             <div
-              key={project.id}
-              className={`bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 ${
+              key={mission.id}
+              className={`bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 border border-gray-700 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
               <div className={`lg:flex ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                {/* Image */}
+                {/* Icon/Image */}
                 <div className="lg:w-1/2">
-                  <div className="h-64 lg:h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                    <Code size={64} className="text-white opacity-50" />
+                  <div className="h-64 lg:h-full bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
+                    <mission.icon size={64} className="text-white opacity-80" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="lg:w-1/2 p-8">
-                  <div className="flex items-center mb-4">
-                    <Calendar size={20} className="text-blue-600 mr-2" />
-                    <span className="text-blue-600 font-medium">{project.date}</span>
-                    <span className="mx-2 text-gray-400">•</span>
-                    <span className="text-gray-600">{project.duration}</span>
-                    <span className="mx-2 text-gray-400">•</span>
-                    <Users size={16} className="text-gray-600 mr-1" />
-                    <span className="text-gray-600">{project.team}</span>
+                <div className="lg:w-1/2 p-8 text-white">
+                  <div className="flex items-center mb-4 text-cyan-400">
+                    <Calendar size={20} className="mr-2" />
+                    <span className="font-medium">{mission.date}</span>
+                    <span className="mx-2 text-gray-500">•</span>
+                    <span className="text-gray-300">{mission.duration}</span>
+                    <span className="mx-2 text-gray-500">•</span>
+                    <Users size={16} className="mr-1" />
+                    <span className="text-gray-300">{mission.team}</span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
-                  <p className="text-gray-600 mb-6">{project.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{mission.title}</h3>
+                  <p className="text-gray-300 mb-6">{mission.description}</p>
 
                   {/* Detailed Description */}
-                  <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Détails du projet :</h4>
-                    <p className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
-                      {project.longDescription}
+                  <div className="bg-gray-800/50 p-4 rounded-lg mb-6 border border-gray-600">
+                    <h4 className="font-semibold text-cyan-400 mb-2">Détails de la mission :</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                      {mission.longDescription}
                     </p>
                   </div>
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Technologies utilisées :</h4>
+                    <h4 className="font-semibold text-cyan-400 mb-3">Technologies utilisées :</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
+                      {mission.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-medium border border-cyan-400/30"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
-                    >
-                      <Github size={18} className="mr-2" />
-                      Code
-                    </a>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-                    >
-                      <ExternalLink size={18} className="mr-2" />
-                      Demo
-                    </a>
                   </div>
                 </div>
               </div>

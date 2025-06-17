@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Send, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
@@ -36,58 +36,19 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter d'opportunités ou échanger
+            Intéressé par mon profil en cybersécurité ? N'hésitez pas à me contacter pour discuter d'opportunités
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Mes Coordonnées</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
-                <Mail className="text-blue-600 mr-4" size={24} />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">votre.email@exemple.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl">
-                <Phone className="text-green-600 mr-4" size={24} />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Téléphone</h4>
-                  <p className="text-gray-600">+33 X XX XX XX XX</p>
-                </div>
-              </div>
-
-              <div className="flex items-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
-                <MapPin className="text-purple-600 mr-4" size={24} />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Localisation</h4>
-                  <p className="text-gray-600">Votre Ville, France</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-xl">
-              <h4 className="font-semibold text-gray-900 mb-3">Disponibilité</h4>
-              <p className="text-gray-700">
-                Je suis actuellement disponible pour des opportunités de stage, d'alternance ou d'emploi junior. 
-                Mon emploi du temps me permet d'être flexible pour des entretiens et des projets.
-              </p>
-            </div>
-          </div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Envoyez-moi un message</h3>
+          <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border border-gray-200">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Envoyez-moi un message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -159,7 +120,7 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>
@@ -174,6 +135,19 @@ export const Contact = () => {
                 )}
               </button>
             </form>
+
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <div className="flex items-center justify-center space-x-6">
+                <div className="flex items-center text-gray-600">
+                  <Mail className="mr-2" size={20} />
+                  <span>votre.email@exemple.com</span>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <MapPin className="mr-2" size={20} />
+                  <span>Votre Ville, France</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
